@@ -3,8 +3,6 @@ package br.com.concretesolutions.api.models;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
-import org.springframework.hateoas.ResourceSupport;
-
 import java.util.List;
 
 /**
@@ -12,7 +10,7 @@ import java.util.List;
  *
  */
 @JsonInclude(Include.NON_NULL)
-public class TrackingResult extends ResourceSupport {
+public class TrackingResult {
 
   private final List<TrackingEntry> tracking;
   

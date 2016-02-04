@@ -33,7 +33,6 @@ configurations {
 
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
-    compile 'org.springframework.hateoas:spring-hateoas'
     compile 'org.jsoup:jsoup:1.8.3' 
     compile 'com.google.code.gson:gson:2.5'
     compile 'com.google.guava:guava:19.0'

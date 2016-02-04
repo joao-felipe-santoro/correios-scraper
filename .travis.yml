@@ -1,9 +1,14 @@
 language: java
 jdk: 
-  - oraclejdk7
+  - oraclejdk8
+before_install:
+  - pip install --user codecov
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 cache:
   directories:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
+after_success:
+  - codecov
+  - bash <(curl -s https://codecov.io/bash)

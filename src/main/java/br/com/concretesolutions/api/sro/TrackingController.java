@@ -23,7 +23,6 @@ import javax.validation.constraints.Pattern;
 @RestController
 public class TrackingController {
 
-
   @RequestMapping(value = "/sro", method = RequestMethod.GET)
   public ResponseEntity<TrackingResult> getTracking(@Pattern(regexp = "[A-Za-z]{2}[0-9]{9}[A-Za-z]{2}",
       message = "Código inválido") @RequestParam(value = "trackingNumber", required = true) String trackingNumber) {

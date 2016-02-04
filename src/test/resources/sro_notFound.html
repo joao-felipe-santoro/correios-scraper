@@ -1,0 +1,114 @@
+<HTML>
+<HEAD>
+<TITLE>SRO - Internet</TITLE>
+</HEAD>
+<SCRIPT>
+<!-- Hide from old browsers
+var FormType = "Update";
+var NextField = "P_COD_FIN";
+function JSLNotNull(pctl, pmsg){
+   if (pctl.value == "") { alert(pmsg); pctl.focus(); return false; }
+   return true;
+}
+function JSLMakeUpper(pctl) {
+   pctl.value = pctl.value.toUpperCase();
+}
+function BT_NEWP_OnClick(ctl) {
+   document.forms[0].Z_ACTION.value = ctl.value;
+   document.forms[0].submit();
+   return true;
+}
+function BT_VOLTAR_OnClick(ctl) {
+history.back()
+   return true;
+}
+function IMPRIMIR(ctl) {
+  window.print();
+  return true;
+}
+function verfonte() {
+	if (event.button==2) {
+		window.alert("Não Disponível!");
+	}
+}
+function verObjeto(objeto) {
+	if (objeto.length != 13) {
+		window.alert("Objeto Inválido!");
+     return false;
+	}
+return true;
+}
+document.onmousedown=verfonte
+//-->
+</SCRIPT>
+<BODY BGCOLOR="d8e6ed" TEXT="0000FF" LINK="000000"VLINK="800040" ALINK="0FF000">
+<FORM ACTION="txect01$.ResultList" METHOD="POST">
+<INPUT TYPE="hidden" NAME="Z_START" VALUE="1">
+<INPUT TYPE="hidden" NAME="P_ITEMCODE" VALUE="SS123456789BR">
+<INPUT TYPE="hidden" NAME="P_LINGUA" VALUE="001">
+<INPUT TYPE="hidden" NAME="P_COD_UNI" VALUE="SS123456789BR">
+<INPUT TYPE="hidden" NAME="P_COD_INI" VALUE="">
+<INPUT TYPE="hidden" NAME="P_COD_FIN" VALUE="">
+<INPUT TYPE="hidden" NAME="P_COD_LIS" VALUE="">
+<INPUT TYPE="hidden" NAME="P_TESTE" VALUE="">
+<INPUT TYPE="hidden" NAME="P_TIPO" VALUE="001">
+</BODY>
+</HTML>
+<HTML>
+<HEAD>
+<TITLE>SRO - Internet</TITLE>
+</HEAD>
+<SCRIPT>
+<!-- Hide from old browsers
+var FormType = "Update";
+var NextField = "P_COD_FIN";
+function JSLNotNull(pctl, pmsg){
+   if (pctl.value == "") { alert(pmsg); pctl.focus(); return false; }
+   return true;
+}
+function JSLMakeUpper(pctl) {
+   pctl.value = pctl.value.toUpperCase();
+}
+function BT_VOLTAR_OnClick(ctl) {
+history.back()
+   return true;
+}
+function IMPRIMIR(ctl) {
+  window.print();
+  return true;
+}
+function verfonte() {
+	if (event.button==2) {
+		window.alert("Não Disponível!");
+	}
+}
+function verObjeto(objeto) {
+	if (objeto.length != 13) {
+		window.alert("Objeto Inválido!");
+     return false;
+	}
+return true;
+}
+document.onmousedown=verfonte
+//-->
+</SCRIPT>
+<BODY BGCOLOR="d8e6ed" TEXT="0000FF" LINK="000000"VLINK="800040" ALINK="0FF000">
+<FORM ACTION="txect01$.ErrorMsg" METHOD="POST">
+<H1> </H1>
+<img align=absmiddle src=../correios/Img/correios.gif>
+<FONT face=Arial size=3 color="#000000"><b>Resultado da Pesquisa</b></font>
+<br><br>
+<FONT face=Arial size=2 color=black><b></b><p>
+
+
+O nosso sistema não possui dados sobre o objeto
+informado. Se o objeto foi postado recentemente, é natural que seus rastros não tenham ingressado no sistema, nesse caso, por favor, tente novamente mais tarde. Adicionalmente, 
+verifique se o código digitado está correto:
+SS123456789BR
+
+<input type=hidden name="Z_ACTION">
+<input type=button name="done" value="Back" onClick="BT_VOLTAR_OnClick(this)">
+</FORM>
+</BODY>
+</HTML>
+

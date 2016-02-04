@@ -9,11 +9,9 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -24,7 +22,6 @@ import java.util.List;
  *
  * @author jfelipesp
  */
-@Service
 public class SroScraper {
 
   /** The Constant NOT_FOUND. */
@@ -32,7 +29,7 @@ public class SroScraper {
 
   /** The Constant BASE_URL. */
   private static final String BASE_URL =
-      "http://websro.correios.com.br/sro_bin/txect01$.QueryList?P_LINGUA=001&P_TIPO=001&Z_ACTION=Search&P_COD_UNI=%s";
+      "http://websro.correios.com.br/sro_bin/txect01$.QueryList";
 
   /** The Constant SDF. */
   private static final SimpleDateFormat SDF = new SimpleDateFormat("dd/MM/yyyy hh:mm");
@@ -49,9 +46,12 @@ public class SroScraper {
   public static TrackingResult getTrackingResult(final String trackingNumber)
       throws IllegalStateException, ParseException, MalformedURLException, IOException {
 
-    final String url = String.format(BASE_URL, trackingNumber);
-
-    Document doc = Jsoup.parse(new URL(url).openStream(), "ISO-8859-1", url);
+    Document doc = Jsoup.connect(BASE_URL)
+                        .data("P_LINGUA","001")
+                        .data("P_TIPO","001")
+                        .data("P_COD_UNI",trackingNumber)
+                        .get();
+    
     if (doc.getElementsMatchingText(NOT_FOUND).size() > 0) {
       throw new IllegalStateException();
     }

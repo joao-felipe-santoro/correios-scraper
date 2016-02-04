@@ -6,22 +6,15 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.springframework.stereotype.Service;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
-import java.net.URL;
 
 /**
  * The Class SroScraper.
  *
  * @author jfelipesp
  */
-@Service
 public class CepScraper {
 
   /** The Constant NOT_FOUND. */
@@ -30,8 +23,6 @@ public class CepScraper {
   /** The Constant BASE_URL. */
   private static final String BASE_URL =
       "http://www.buscacep.correios.com.br/sistemas/buscacep/resultadoBuscaCepEndereco.cfm";
-
-  private static final String PARAMETERS = "tipoCEP=ALL&relaxation=%s";
 
   /**
    * Gets the tracking result.
@@ -44,7 +35,12 @@ public class CepScraper {
   public static CepResult getPostalcodeResult(final String postalcode)
       throws IllegalStateException, IOException, MalformedURLException {
     // parsing result
-    Document doc = Jsoup.parse(retrieveHtml(postalcode));
+    
+    
+    Document doc = Jsoup.connect(BASE_URL)
+                        .data("tipoCEP", "ALL")
+                        .data("relaxation", postalcode)
+                        .post();
 
     if (doc.getElementsMatchingText(NOT_FOUND).size() > 0) {
       throw new IllegalStateException();
@@ -62,32 +58,5 @@ public class CepScraper {
         tds.get(2).text().split("/")[1], //
         tds.get(3).text().replace("-", ""));
   }
-
-  private static String retrieveHtml(final String postalcode) throws IOException, MalformedURLException {
-    final URL url = new URL(BASE_URL);
-    HttpURLConnection con = (HttpURLConnection) url.openConnection();
-
-    // add request header
-    con.setRequestMethod("POST");
-    final String urlParameters = String.format(PARAMETERS, postalcode);
-
-    // Send post request
-    con.setDoOutput(true);
-    DataOutputStream wr = new DataOutputStream(con.getOutputStream());
-    wr.writeBytes(urlParameters);
-    wr.flush();
-    wr.close();
-
-    BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-    String inputLine;
-    StringBuffer response = new StringBuffer();
-
-    while ((inputLine = in.readLine()) != null) {
-      response.append(inputLine);
-    }
-    in.close();
-
-    return response.toString();
-  }
-
+  
 }

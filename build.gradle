@@ -38,6 +38,8 @@ dependencies {
     compile 'com.google.code.gson:gson:2.5'
     compile 'com.google.guava:guava:19.0'
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+    
+    testCompile 'junit:junit:4.12'
 }
 
 jacocoTestReport {

@@ -30,7 +30,7 @@ public class CepScraper {
   /** The Constant BASE_URL. */
   private static final String BASE_URL =
       "http://www.buscacep.correios.com.br/sistemas/buscacep/resultadoBuscaCepEndereco.cfm";
-  
+
   private static final String PARAMETERS = "tipoCEP=ALL&relaxation=%s";
 
   /**
@@ -41,15 +41,36 @@ public class CepScraper {
    * @return the tracking result
    * @throws IllegalStateException, IOException, MalformedURLException 
    */
-  public static CepResult getPostalcodeResult(final String postalcode) throws IllegalStateException, IOException, MalformedURLException {
+  public static CepResult getPostalcodeResult(final String postalcode)
+      throws IllegalStateException, IOException, MalformedURLException {
+    // parsing result
+    Document doc = Jsoup.parse(retrieveHtml(postalcode));
 
+    if (doc.getElementsMatchingText(NOT_FOUND).size() > 0) {
+      throw new IllegalStateException();
+    }
+
+    Elements tables = doc.getElementsByClass("tmptabela");
+    Element table = tables.get(0);
+    Elements trs = table.getElementsByTag("tr");
+    Elements tds = trs.get(1).getElementsByTag("td");
+
+    return new CepResult(tds.get(0).text().split(" - ")[0], //
+        tds.get(0).text().split(" - ").length > 1 ? tds.get(0).text().split(" - ")[1] : null, //
+        tds.get(1).text(), //
+        tds.get(2).text().split("/")[0], //
+        tds.get(2).text().split("/")[1], //
+        tds.get(3).text().replace("-", ""));
+  }
+
+  private static String retrieveHtml(final String postalcode) throws IOException, MalformedURLException {
     final URL url = new URL(BASE_URL);
     HttpURLConnection con = (HttpURLConnection) url.openConnection();
 
-    //add request header
+    // add request header
     con.setRequestMethod("POST");
     final String urlParameters = String.format(PARAMETERS, postalcode);
-    
+
     // Send post request
     con.setDoOutput(true);
     DataOutputStream wr = new DataOutputStream(con.getOutputStream());
@@ -57,8 +78,7 @@ public class CepScraper {
     wr.flush();
     wr.close();
 
-    BufferedReader in = new BufferedReader(
-            new InputStreamReader(con.getInputStream()));
+    BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
     String inputLine;
     StringBuffer response = new StringBuffer();
 
@@ -66,25 +86,8 @@ public class CepScraper {
       response.append(inputLine);
     }
     in.close();
-    
-    // parsing result
-    Document doc = Jsoup.parse(response.toString());
-    
-    if(doc.getElementsMatchingText(NOT_FOUND).size() > 0) {
-      throw new IllegalStateException();
-    }
-    
-    Elements tables = doc.getElementsByClass("tmptabela");
-    Element table = tables.get(0);
-    Elements trs = table.getElementsByTag("tr");
-    Elements tds = trs.get(1).getElementsByTag("td");
-    
-    return new CepResult(tds.get(0).text().split(" - ")[0], //
-                         tds.get(0).text().split(" - ").length > 1 ? tds.get(0).text().split(" - ")[1] : null, // 
-                         tds.get(1).text(),  //
-                         tds.get(2).text().split("/")[0], //
-                         tds.get(2).text().split("/")[1], // 
-                         tds.get(3).text().replace("-", ""));
+
+    return response.toString();
   }
 
 }

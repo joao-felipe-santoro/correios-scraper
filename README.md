@@ -13,10 +13,6 @@ Scraper to retrieve Brazilian Postal Service object tracking and Postal Code inf
 # GET /cep?postalcode=20241320
 + Response 200 (application/json;charset=UTF-8)
 
-    + Headers
-
-            Transfer-Encoding: chunked
-
     + Body
 
             {"street":"Rua Joaquim Murtinho ","district":"Santa Teresa ","city":"Rio de Janeiro","state":"RJ","postalCode":"20241320"}
@@ -25,10 +21,6 @@ Scraper to retrieve Brazilian Postal Service object tracking and Postal Code inf
 # GET /sro?trackingNumber=DU156647456BR
 
 + Response 200 (application/json;charset=UTF-8)
-
-    + Headers
-
-            Transfer-Encoding: chunked
 
     + Body
 

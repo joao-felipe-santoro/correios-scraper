@@ -1,13 +1,20 @@
 language: java
-jdk: 
-  - oraclejdk8
+jdk:
+- oraclejdk8
 before_install:
-  - pip install --user codecov
+- pip install --user codecov
 before_cache:
-  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
 after_success:
-  - codecov
+- codecov
+deploy:
+  provider: heroku
+  api_key:
+    secure: DOeDcxJ0Nx5aP1qfwGWONVfU7gYj0KlUxBRipVAIFLKt2qnOqwn75UBHK35MmNoI3e7NxPkiMYwn/+29pKTfUv9J3PuuQRaAlGQHNgawz7sdWVr9550cbyuy+dI4XnnCMGF0njgq4EZUBfZKTjpTTyWuBUV10rRLPUI1yG3QXm8QKxFQyWXTZqRgKO4vNoCmljAY0uIse0TzRnTDaIwc59OlhbnHBKaul/1YVC9p3NbudFU4NVkPt9o8S5ppxpL3AH4MIEDeEdSWCnWMg9XD3l6z/HCdlORneavr49OYSTod3N6IayAhGPsmbgtq4MLGuqG/WyWOjjHs9rIM73Y6aLVaJMQaHaSCVLYxp5llQ+B8RwO+uDgCv73VwzX04Pwa+tDxVmLBaNq2bLkbgp/rT55ygeqDeHrOqZG+XZgX0g9Ao1vb7WvM0ff36ffacXplKbFjdtEiPrSrHPk4UPkThwlu6p6eF1/4RgetFUclf7PpA5DrGL1JhMj1yenn1IiMDi3v2s4pzP8zB/YLdr54/6XIdHe+XH/rvsDMYoowkk64IBgtRsPEnCvgLk9mJvwui2gPJcwvHtZN3kF+FZxRxmKRy8T1J96vDuoOuk7ppGAxytobXq/t+7viAr1R1dZMtDonfXddNjFjvucFtx6HQRBQ8pCprNGu5D/Csks43rI=
+  app: correios-scraper
+  on:
+    repo: jfelipesp/correios-scraper

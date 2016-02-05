@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.io.IOException;
 import java.text.ParseException;
 
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 
@@ -24,7 +25,7 @@ import javax.validation.constraints.Pattern;
 public class TrackingController {
 
   @RequestMapping(value = "/sro", method = RequestMethod.GET)
-  public ResponseEntity<TrackingResult> getTracking(@Pattern(regexp = "[A-Za-z]{2}[0-9]{9}[A-Za-z]{2}",
+  public ResponseEntity<TrackingResult> getTracking(@NotNull @Pattern(regexp = "[A-Za-z]{2}[0-9]{9}[A-Za-z]{2}",
       message = "Código inválido") @RequestParam(value = "trackingNumber", required = true) String trackingNumber) {
     try {
       return new ResponseEntity<TrackingResult>(SroScraper.getTrackingResult(trackingNumber), HttpStatus.OK);

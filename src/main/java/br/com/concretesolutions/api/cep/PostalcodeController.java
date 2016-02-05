@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 
@@ -25,8 +26,9 @@ public class PostalcodeController {
 
 
   @RequestMapping(value = "/cep", method = RequestMethod.GET)
-  public ResponseEntity<CepResult> getTracking(@Pattern(regexp = "[0-9]{8}",
+  public ResponseEntity<CepResult> getTracking(@NotNull @Pattern(regexp = "[0-9]{8}",
       message = "Código inválido") @RequestParam(value = "postalcode", required = true) String postalcode) {
+
     try {
       return new ResponseEntity<CepResult>(CepScraper.getPostalcodeResult(postalcode), HttpStatus.OK);
     } catch (IllegalStateException e) {

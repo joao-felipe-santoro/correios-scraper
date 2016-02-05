@@ -60,3 +60,7 @@ check.dependsOn jacocoTestReport
 task wrapper(type: Wrapper) {
     gradleVersion = '2.10'
 }
+
+task stage {
+  dependsOn build
+}

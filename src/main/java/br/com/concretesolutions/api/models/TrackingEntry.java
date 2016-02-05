@@ -1,8 +1,11 @@
 package br.com.concretesolutions.api.models;
 
+import br.com.concretesolutions.serializers.JsonDateSerializer;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import java.util.Date;
 
@@ -10,6 +13,7 @@ import java.util.Date;
 public class TrackingEntry {
 
   @JsonProperty
+  @JsonSerialize(using=JsonDateSerializer.class)
   private Date date;
 
   @JsonProperty

@@ -10,6 +10,7 @@
 package br.com.concretesolutions.test.scrapers;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import br.com.concretesolutions.api.models.TrackingResult;
 import br.com.concretesolutions.scrapers.SroScraper;
@@ -35,9 +36,9 @@ import java.io.File;
  * @author jfelipesp
  */
 @RunWith(PowerMockRunner.class)
-@PrepareForTest({Jsoup.class})
+@PrepareForTest({ Jsoup.class })
 public class SroScrapersTest {
-  
+
   /**
    * Tracking number not found test.
    *
@@ -49,36 +50,38 @@ public class SroScrapersTest {
     final File file = new File(Thread.currentThread().getContextClassLoader().getResource("sro_ok.html").getFile());
     Connection connection = Mockito.mock(Connection.class);
     Document document = Jsoup.parse(file, Charsets.UTF_8.name());
-    PowerMockito.mockStatic(Jsoup.class);    
+    PowerMockito.mockStatic(Jsoup.class);
     PowerMockito.when(Jsoup.connect(Mockito.anyString())).thenReturn(connection);
-    PowerMockito.when(connection.data(Mockito.anyString(), Mockito.anyString()))
-    .thenReturn(connection)
-    .thenReturn(connection)
-    .thenReturn(connection);
+    PowerMockito.when(connection.data(Mockito.anyString(), Mockito.anyString())).thenReturn(connection)
+        .thenReturn(connection).thenReturn(connection);
     PowerMockito.when(connection.get()).thenReturn(document);
-    
-    
-    TrackingResult result =  SroScraper.getTrackingResult("AA123456789AA");
-    assertEquals(6,result.getTracking().size());
+
+
+    TrackingResult result = SroScraper.getTrackingResult("AA123456789AA");
+    assertEquals(6, result.getTracking().size());
     assertEquals(result.getTrackingNumber(), "AA123456789AA");
-    
+
   }
-  
-  @Test(expected = IllegalStateException.class)
+
+  @Test
   public void trackingNumberNotFoundTest() throws Exception {
 
-    final File file = new File(Thread.currentThread().getContextClassLoader().getResource("sro_notFound.html").getFile());
+    final File file =
+        new File(Thread.currentThread().getContextClassLoader().getResource("sro_notFound.html").getFile());
     Connection connection = Mockito.mock(Connection.class);
     Document document = Jsoup.parse(file, Charsets.UTF_8.name());
-    PowerMockito.mockStatic(Jsoup.class);    
+    PowerMockito.mockStatic(Jsoup.class);
     PowerMockito.when(Jsoup.connect(Mockito.anyString())).thenReturn(connection);
-    PowerMockito.when(connection.data(Mockito.anyString(), Mockito.anyString()))
-    .thenReturn(connection)
-    .thenReturn(connection)
-    .thenReturn(connection);
+    PowerMockito.when(connection.data(Mockito.anyString(), Mockito.anyString())).thenReturn(connection)
+        .thenReturn(connection).thenReturn(connection);
     PowerMockito.when(connection.get()).thenReturn(document);
-    
-    SroScraper.getTrackingResult("AA123456789AA");
+
+    try {
+      SroScraper.getTrackingResult("AA123456789AA");
+      fail("should not reach here!");
+    } catch (IllegalStateException ex) {
+      // Success \o/
+    }
   }
 
 }

@@ -1,6 +1,7 @@
 package br.com.concretesolutions.test.scrapers;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import br.com.concretesolutions.api.models.CepResult;
 import br.com.concretesolutions.scrapers.CepScraper;
@@ -18,6 +19,7 @@ import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
 import java.io.File;
+import java.io.IOException;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -34,20 +36,16 @@ public class CepScrapersTest {
    *
    * @throws Exception the exception
    */
-  @Test(expected = IllegalStateException.class)
+  @Test
   public void postalcodeNotFoundTest() throws Exception {
+    prepareMock("cep_notFound.html");
     
-    final File file = new File(Thread.currentThread().getContextClassLoader().getResource("cep_notFound.html").getFile());
-    Connection connection = Mockito.mock(Connection.class);
-    Document document = Jsoup.parse(file, Charsets.UTF_8.name());
-    PowerMockito.mockStatic(Jsoup.class);    
-    PowerMockito.when(Jsoup.connect(Mockito.anyString())).thenReturn(connection);
-    PowerMockito.when(connection.data(Mockito.anyString(), Mockito.anyString()))
-    .thenReturn(connection)
-    .thenReturn(connection);
-    PowerMockito.when(connection.post()).thenReturn(document);
-    
-    CepScraper.getPostalcodeResult("99999999");
+    try {
+      CepScraper.getPostalcodeResult("99999999");
+      fail("should not reach here!");
+    } catch (IllegalStateException ex) {
+      // Success \o/
+    }
   }
 
   /**
@@ -56,16 +54,8 @@ public class CepScrapersTest {
    * @throws Exception the exception
    */
   @Test
-  public void postalcodeTest() throws Exception {
-    final File file = new File(Thread.currentThread().getContextClassLoader().getResource("cep_ok.html").getFile());
-    Connection connection = Mockito.mock(Connection.class);
-    Document document = Jsoup.parse(file, Charsets.UTF_8.name());
-    PowerMockito.mockStatic(Jsoup.class);    
-    PowerMockito.when(Jsoup.connect(Mockito.anyString())).thenReturn(connection);
-    PowerMockito.when(connection.data(Mockito.anyString(), Mockito.anyString()))
-    .thenReturn(connection)
-    .thenReturn(connection);
-    PowerMockito.when(connection.post()).thenReturn(document); 
+  public void postalcodeTest() throws Exception { 
+    prepareMock("cep_ok.html");
     
     CepResult result = CepScraper.getPostalcodeResult("04564001");
     
@@ -76,6 +66,17 @@ public class CepScrapersTest {
     assertEquals("SP", result.getState());
     assertEquals("04564001", result.getPostalCode());
    
+  }
+  
+  private static void prepareMock(final String file) throws IOException {
+    Document document = Jsoup.parse(new File(Thread.currentThread().getContextClassLoader().getResource(file).getFile()), Charsets.UTF_8.name());
+    Connection connection = Mockito.mock(Connection.class);
+    PowerMockito.mockStatic(Jsoup.class);    
+    PowerMockito.when(Jsoup.connect(Mockito.anyString())).thenReturn(connection);
+    PowerMockito.when(connection.data(Mockito.anyString(), Mockito.anyString()))
+    .thenReturn(connection)
+    .thenReturn(connection);
+    PowerMockito.when(connection.post()).thenReturn(document);
   }
 
 }

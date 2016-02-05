@@ -18,7 +18,7 @@ import java.util.Date;
 @Component
 public class JsonDateSerializer extends JsonSerializer<Date> {
 
-  private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");
+  private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
   /*
    * (non-Javadoc)

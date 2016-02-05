@@ -35,7 +35,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -84,13 +84,15 @@ public class TrackingControllerTest {
   
   @Test
   public void trackingNumberOKTest() throws Exception {
+    Calendar cal = Calendar.getInstance();
+    cal.set(1970, 0, 1, 0, 0, 0);
     List<TrackingEntry> trackingEntries = new ArrayList<TrackingEntry>();
-    trackingEntries.add(new TrackingEntry(new Date(1L), "Unit Test", "Testing"));
+    trackingEntries.add(new TrackingEntry(cal.getTime(), "Unit Test", "Testing"));
     
     PowerMockito.when(SroScraper.getTrackingResult(Mockito.eq("AA000000003BB"))).thenReturn(new TrackingResult("AA000000003BB", trackingEntries));
 
     mock.perform(get("/sro").param("trackingNumber", "AA000000003BB")).andExpect(status().isOk())
-        .andExpect(content().string("{\"tracking\":[{\"date\":\"1969-12-31 09:00\",\"location\":\"Unit Test\",\"action\":\"Testing\"}],\"trackingNumber\":\"AA000000003BB\"}"));
+        .andExpect(content().string("{\"tracking\":[{\"date\":\"1970-01-01 00:00\",\"location\":\"Unit Test\",\"action\":\"Testing\"}],\"trackingNumber\":\"AA000000003BB\"}"));
   }
 
 }

@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/jfelipesp/correios-scraper.svg?branch=master)](https://travis-ci.org/jfelipesp/correios-scraper)
 [![codecov.io](https://codecov.io/github/jfelipesp/correios-scraper/coverage.svg?branch=master)](https://codecov.io/github/jfelipesp/correios-scraper?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/6aab9d1734054ff6a0c7dc0ceb2c6dfc)](https://www.codacy.com/app/jfelipesp/correios-scraper)
 
 # correios-scraper
 Scraper to retrieve Brazilian Postal Service object tracking and Postal Code information to a JSON output.

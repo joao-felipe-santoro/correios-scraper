@@ -3,8 +3,7 @@ jdk:
 - oraclejdk8
 before_install:
 - pip install --user codecov
-- curl https://www.jpm4j.org/install/script | sh
-- jpm install com.codacy:codacy-coverage-reporter:assembly
+- ./install-jpm4j.sh
 before_cache:
 - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 cache:

@@ -1,86 +1,731 @@
-<HTML>
-<HEAD>
-<TITLE>SRO - Internet</TITLE>
-</HEAD>
-<SCRIPT>
-<!-- Hide from old browsers
-var FormType = "Update";
-var NextField = "P_COD_FIN";
-function JSLNotNull(pctl, pmsg){
-   if (pctl.value == "") { alert(pmsg); pctl.focus(); return false; }
-   return true;
-}
-function JSLMakeUpper(pctl) {
-   pctl.value = pctl.value.toUpperCase();
-}
-function BT_NEWP_OnClick(ctl) {
-   document.forms[0].Z_ACTION.value = ctl.value;
-   document.forms[0].submit();
-   return true;
-}
-function BT_VOLTAR_OnClick(ctl) {
-history.back()
-   return true;
-}
-function IMPRIMIR(ctl) {
-  window.print();
-  return true;
-}
-function verfonte() {
-	if (event.button==2) {
-		window.alert("Não Disponível!");
-	}
-}
-function verObjeto(objeto) {
-	if (objeto.length != 13) {
-		window.alert("Objeto Inválido!");
-     return false;
-	}
-return true;
-}
-document.onmousedown=verfonte
-//-->
-</SCRIPT>
-<BODY BGCOLOR="d8e6ed" TEXT="0000FF" LINK="000000"VLINK="800040" ALINK="0FF000">
-<FORM ACTION="txect01$.ResultList" METHOD="POST">
-<INPUT TYPE="hidden" NAME="Z_START" VALUE="1">
-<INPUT TYPE="hidden" NAME="P_ITEMCODE" VALUE="DU156647456BR">
-<INPUT TYPE="hidden" NAME="P_LINGUA" VALUE="001">
-<INPUT TYPE="hidden" NAME="P_COD_UNI" VALUE="DU156647456BR">
-<INPUT TYPE="hidden" NAME="P_COD_INI" VALUE="">
-<INPUT TYPE="hidden" NAME="P_COD_FIN" VALUE="">
-<INPUT TYPE="hidden" NAME="P_COD_LIS" VALUE="">
-<INPUT TYPE="hidden" NAME="P_TESTE" VALUE="">
-<INPUT TYPE="hidden" NAME="P_TIPO" VALUE="001">
-<H1> </H1>
-<img align=absmiddle src=../correios/Img/correios.gif><FONT face=Arial size=3 color="#000000"><b>
-DU156647456BR
- - Histórico do Objeto</b></font>
-<font face=Arial color=black size=2>
-<br>O horário não indica quando a situação ocorreu, mas sim quando os dados foram recebidos pelo sistema, exceto no caso do <b>SEDEX 10 e do SEDEX Hoje, </b>em que ele  representa o horário real da entrega.<p>
-<table  border cellpadding=1 hspace=10>
-<colgroup style='font:8pt Tahoma;color=Black' valign=top><colgroup style='font:8pt Tahoma; color=Navy'><colgroup style='font:8pt Tahoma;color=Maroon'>
+<html lang="pt-br" class=" js"><head><meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1">
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1">
+<meta http-equiv="Content-Language" content="pt">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Resultado Rastreamento</title>
+<meta name="description" content="[page]">
+<meta name="keywords" content="">
+<!-- AppInternalsXpert BMX Integration Begin -->
+<script async="" src="//www.google-analytics.com/analytics.js"></script><script>
+
+if(!OPNET_ARXS){
+
+   var OPNET_ARXS={startJS:Number(new Date()),
+
+   clientId:'A6510A31E51D7243',appId:100041,
+
+   collector:'performanceapm.correios.com.br',
+
+   collectorHttpPort:80, collectorHttpsPort:80,
+
+   sv:'0302',
+
+   ajax:true, sync:true,
+
+   ajaxResponseTime:true};
+
+   (function(){
+
+      var w=window,l=w.addEventListener,m=w.attachEvent,
+
+      d=document,s='script',t='load',o=OPNET_ARXS,
+
+      r=(('https:'===d.location.protocol)?
+
+      'https://performanceapm.correios.com.br':
+
+      'http://performanceapm.correios.com.br')+
+
+      '/opnet_browsermetrix.c.'+
+
+      (o.ajax?'ajax.js':'js'),p=('onpagehide' in w),e=p?'pageshow':t,
+
+      j=d.createElement(s),x=d.getElementsByTagName(s)[0],
+
+      h=function(y){o.ldJS=new Date();o.per=y?y.persisted:null;},
+
+      i=function(){o.ld=1;};o.cookie=d.cookie;d.cookie=
+
+      '_op_aixPageId=0; path=/; expires='+(new Date(0)).toGMTString();
+
+      o.cookieAfterDelete=d.cookie;j.async=1;j.src=r;
+
+      if(l){l(e,h,false);if(p){l(t,i,false);}}else if(m)
+
+      {m('on'+e,h);if(p){m('on'+t,i);}}
+
+      if(o.sync){d.write('<'+s+' src=\''+r+'\'></'+s+'>');}
+
+      else{x.parentNode.insertBefore(j,x);}
+
+   })();}
+
+</script><script src="http://performanceapm.correios.com.br/opnet_browsermetrix.c.ajax.js"></script>
+<script>if(!OPNET_ARXS_PARAM){var OPNET_ARXS_PARAM={};} OPNET_ARXS_PARAM.pageId = 'a2_2a3c95e8-97b7-417a-9a21-208c56d2f593';</script>             
+<!-- AppInternalsXpert BMX Integration End -->
+<script type="text/javascript"> 
+pageid = '1C658B24-5056-9163-891FB9FC40735A16'; 
+</script>
+<noscript>
+&lt;p&gt;identificador da p&amp;Atilde;¡gina&lt;/p&gt;
+</noscript>
+<base href="http://www2.correios.com.br/"> 
+<link rel="icon" href="home2014/img/icon.png" type="image/gif">
+
+<!-- scripts --><noscript>&lt;p&gt;Biblioteca de efeitos&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/jquery-1.6.2.min.js"></script>
+    <noscript>&lt;p&gt;Biblioteca de efeitos para menus&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/ddaccordion.js"></script>
+    <noscript>&lt;p&gt;Biblioteca de efeitos para tabbes&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/jtabber.js"></script>
+    <noscript>&lt;p&gt;Biblioteca de efeitos colorbox&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/jquery.colorbox-min.js"></script>
+   <noscript>&lt;p&gt;Biblioteca de validaÃ§Ã£o de formulÃ¡rios&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/validations.js"></script>
+
+  <noscript>&lt;p&gt;Script Javascript&lt;/p&gt;</noscript>
+  <script type="text/javascript" src="home2014/js/scripts.js"></script>
+  <noscript>&lt;p&gt;Script Javascript&lt;/p&gt;</noscript>   
+  <script type="text/javascript" src="home2014/js/cookie.js"></script>
+    <noscript>&lt;p&gt;&lt;/p&gt;Script Javascript</noscript>   
+<script type="text/javascript">document.documentElement.className += " js";</script>
+  <noscript>&lt;p&gt;Controle de abas&lt;/p&gt;</noscript>
+ <noscript>&lt;p&gt;Biblioteca de animaÃ§Ãµes&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/jquery-ui-1.8.16.custom.min.js">
+  </script>  
+   <script type="text/javascript">
+   jQuery(function($){
+        $.datepicker.regional['pt-BR'] = {
+                closeText: 'Fechar',
+                prevText: '&#x3c;Anterior',
+                nextText: 'Pr&oacute;ximo&#x3e;',
+                currentText: 'Hoje',
+                monthNames: ['Janeiro','Fevereiro','Mar&ccedil;o','Abril','Maio','Junho',
+                'Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+                monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun',
+                'Jul','Ago','Set','Out','Nov','Dez'],
+                dayNames: ['Domingo','Segunda-feira','Ter&ccedil;a-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sabado'],
+                dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
+                dayNamesMin: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
+                weekHeader: 'Sm',
+                dateFormat: 'dd/mm/yy',
+                firstDay: 0,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: ''};
+        $.datepicker.setDefaults($.datepicker.regional['pt-BR']);
+});
+</script>
+  
+    
+
+<!-- /scripts -->
+
+<!-- CSS -->
+
+  <link href="home2014/css/layout.css" rel="stylesheet" type="text/css">
+<!-- /CSS --->
+ 
+</head>
+<!--[if lt IE 7]> <body class="ie6"> <![endif]-->
+<!--[if IE 7]>    <body class="ie7"> <![endif]-->
+<!--[if IE 8]>    <body class="ie8"> <![endif]-->
+<!--[if !IE]>-->  <body style="font-size: 9px;">             <!--<![endif]-->
+<div class="back">
+<div class="acessibilidade">
+  <div class="wrap">
+    <ul>
+      <li class="tocontent"> <span class="separator-bar">&nbsp;</span> <a href="javascript:void(0);" onclick="document.location.hash='ancora';" title="Ir para o conteúdo principal da página">Ir ao  conteúdo</a> </li>
+      <li class="font-plus" id="biggerFont"> <a href="javascript:void(0);" title="Aumentar o tamanho da fonte do texto">A</a> </li>
+      <li id="defaultFont"> <span class="separator-dot">&nbsp;</span> <a href="javascript:void(0);" title="Retornar a fonte do texto para tamanho padrão">Tamanho padrão</a> <span class="separator-dot">&nbsp;</span> </li>
+      <li class="font-minus" id="smallerFont"> <a href="javascript:void(0);" title="Diminuir o tamanho da fonte do texto">A</a> </li>
+      <li class="contrast" id="contrast"> <span class="separator-bar">&nbsp;</span> <a href="javascript:void(0);" title="Modificar para o modo de alto contraste">Contraste</a> <span class="separator-bar">&nbsp;</span> </li>
+      <li> <span class="separator-bar">&nbsp;</span> <a href="http://www.correios.com.br/sobre-correios/sustentabilidade/vertente-social/headmouse-e-teclado-virtual/">Teclado Virtual</a> </li>
+      <li> <a href="http://www.correios.com.br/sobre-correios/sustentabilidade/vertente-social/headmouse-e-teclado-virtual/" id="txt-headmouse">Headmouse</a></li>
+    </ul>
+  </div>
+</div> 
+<!-- header --->
+
+<div class="header">
+  <h1 class="logo float-left"> <a href="http://www.correios.com.br" title="Ir para a pÃ¡gina incial" alt="Logo Correios"><img src="home2014/img/layout/logo.png" alt="Ir para a pÃ¡gina inicial" title="Ir para a pÃ¡gina incial"></a> </h1>
+  <div class="acesso_rapido">
+
+	<div class="text-right">
+    	
+    	<a href="http://www.correios.com.br/sobre-correios/fale-com-os-correios/fc">Fale com os Correios</a><br>
+    </div>
+
+	<div class="produtosaz float-right">
+      <div class="expo" headerindex="0h">Outros sites</div>
+
+	  <span class="dados abaaz" contentindex="0c" style="display: none;">
+		  <div class="dadosaz">
+			<span class="dica"> Acesse a outros sites dos Correios</span><br>
+			<a href="http://www.correios.com.br/para-voce"><b>Correios para você</b></a><br>
+			<a href="http://www.correios.com.br/para-sua-empresa"><b>Correios para sua empresa</b></a><br>
+			<a href="http://www.correios.com.br/sobre-correios"><b>Sobre Correios</b></a><br>
+			<a href="produtosaz/default.cfm?filtro=R/Z"><b>Espaço da Filatelia</b></a><br>
+			<a href="http://blog.correios.com.br/correios"><b>Blog Institucional do Correios</b></a><br>
+			<a href="http://m.correios.com.br"><b>Correios mobile</b></a><br>
+		  </div>
+      </span>
+
+	</div>
+
+	<div class="produtosaz float-right">
+      <div class="expo" headerindex="1h">Correios de A a Z</div>
+
+	  <span class="dados abaaz" contentindex="1c" style="display: none;">
+		  <div class="dadosaz">
+			<span class="dica"> Escolha pela letra inicial dos nossos produtos, serviços e assuntos.<br></span><br>
+			<a href="http://www.correios.com.br/para-voce/correios-de-a-a-z-1"><b>Todos os itens</b></a><br>
+			<a href="http://www.correios.com.br/para-voce/correios-de-a-a-z?filtro=abc"><b>Correios de A-C</b></a><br>
+			<a href="http://www.correios.com.br/para-voce/correios-de-a-a-z-1?filtro=def"><b>Correios de D-F</b></a><br>
+			<a href="http://www.correios.com.br/para-voce/correios-de-a-a-z-1?filtro=ghijklmnopq"><b>Correios de G-Q</b></a><br>
+			<a href="http://www.correios.com.br/para-voce/correios-de-a-a-z-1?filtro=rstuvwxyz"><b>Correios de R-Z</b></a>
+		  </div>
+      </span>
+
+	</div>
+
+
+  </div>
+  <!-- acesso rÃ¡pido -->
+  <br class="clr">
+
+</div>
+
+	<div class="tabs">
+      <div class="wrap"> 
+		  <ul class="tabs-list">
+			<li> 
+				<a href="http://www.correios.com.br/para-voce"><h2>Você</h2></a> 
+			</li>
+			<li>
+				<a href="http://www.correios.com.br/para-sua-empresa"><h2>Sua Empresa</h2></a>
+			</li>
+			<li> 
+				<a href="http://www.correios.com.br/Para-governo"><h2>Governo</h2></a>
+			</li>
+			<li>
+				<a href="http://www.correios.com.br/sobre-correios"><h2>Sobre Correios</h2></a>
+			</li>
+			<li> 
+				<a href="http://www.correios.com.br/correios-online"><h2>Correios On-line</h2></a>
+			</li>
+			<li class="current"> 
+				<a href="default.cfm"><h2>Sistemas</h2></a>
+			</li>
+		  </ul>
+	  </div>  
+<!-- /header --->
+<div class="wrap">   
+<div class="content">
+<div class="laminas" style="display: block;">
+<div class="column1">
+<span class="mver"> 
+<span class="dominio"></span>
+<h3>Rastreamento</h3>
+<ul>
+<li>
+<a href="sistemas/rastreamento/default.cfm" target="_self">Rastreamento de objetos</a>
+</li>
+<li>
+<a href="http://globaltracktrace.ptc.post/gtt.web/Search.aspx" target="_self">Rastreamento de objetos em outros países</a>
+</li>
+<li>
+<a href="http://www.correios.com.br/para-voce/precisa-de-ajuda/como-rastrear-um-objeto" target="_self">Como rastrear um objeto</a>
+</li>
+<li>
+<a href="http://www.correios.com.br/para-voce/precisa-de-ajuda/como-rastrear-um-objeto/siglas-utilizadas-no-rastreamento-de-objeto" target="_self">Siglas utilizadas no rastreamento de objetos</a>
+</li>
+<li>
+<a href="http://www.correios.com.br/para-voce/precisa-de-ajuda/como-rastrear-um-objeto/rastreamento-via-sms" target="_self">Rastreamento via SMS</a>
+</li>
+</ul>  
+</span>
+<!-- Fim Menu vertical -->
+</div>
+<!-- column1 -->
+<div class="column2">
+<div class="breadcrumb"></div>
+<div class="content  trescolunas">
+<a name="ancora"></a>
+
+<div class="tituloimagem"><h3><span class="codSro"><span>DU</span><span>156</span><span>647</span><span>456</span><span>BR</span></span></h3></div>
+<div class="quadroavisos">
+<h4>ATENÇÃO:</h4>
+<p>Objetos registrados recebidos do exterior que apresentam código iniciado por “R” não pertencem à modalidade expressa, sem rastreamento ponto a ponto e com prazo estimado de 40 DIAS ÚTEIS a partir da liberação na alfândega.</p>
+<h4>Rastreamento</h4>
+<p>O horário apresentado no histórico do objeto não indica quando a situação ocorreu, mas sim quando os dados foram recebidos pelo sistema, exceto no caso do SEDEX 10, SEDEX 12 e do SEDEX Hoje, em que ele representa o horário real da entrega.</p>
+<h4>Objetos postados no Brasil e destinados ao exterior</h4>
+<p>O rastreamento para objetos postados no Brasil com código iniciado por "R" e "C" não é garantido fora do território brasileiro. Para esses objetos, os Operadores postais de outros países podem não disponibilizar e/ou transmitir informação de rastreamento para o Brasil. Sendo assim, consultas de rastreamento de objetos podem também ser realizadas nos sites dos Operadores de destino disponíveis em: <a href="http://www.upu.int/en/the-upu/member-countries.html">http://www.upu.int/en/the-upu/member-countries.html</a></p>
+</div>
+<div class="ctrlcontent">
+
+<div class="highlightSRO">
+
+<div id="imagemhidden">
+<div class="status">
+
+<img src="home2014/img/SRO/entrega.gif" alt="Objeto entregue ao destinatário">
+
+</div>
+</div>
+<div display:block=""><br><strong>Objeto entregue ao destinatário</strong><br>01/02/2016 18:37 Sao Paulo / SP 
+<script src="sistemas/rastreamento/js/qrcode.js" type="text/javascript"></script>
+<script src="sistemas/rastreamento/js/jquery.qrcode.js" type="text/javascript"></script>	
+</div>
+</div>
+<div class="act-extras" style="display:block; width:430px">
+<form name="frmprint" id="frmprint" method="post" action="sistemas/rastreamento/newprint.cfm" target="_blank">
+<input type="hidden" name="objetos" value="DU156647456BR">
+</form>
+<a class="icon print" onclick="document.getElementById('frmprint').submit();"><img width="22px" height="22px" src="home2014/img/trans.gif">Imprimir</a>
+ 
+</div> 
+<div class="destaque" style="background-color:#eee; width:98%;  display:table; height:auto; padding:10px; margin-bottom:5px;">
+<div id="qrcodeTable" style="float:left; width:100px"><table style="width: 97px; height: 97px; border: 0px; border-collapse: collapse; background-color: rgb(255, 255, 255);"><tbody><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td></tr><tr style="height: 3.88px;"><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(255, 255, 255);"></td><td style="width: 3.88px; background-color: rgb(0, 0, 0);"></td></tr></tbody></table></div>
+<script>
+//jQuery('#qrcode').qrcode("this plugin is great");
+jQuery('#qrcodeTable').qrcode({
+width	: 97,
+height	: 97,
+render	: "table",
+text	: "DU156647456BR"
+});	
+</script>
+<div style="float:left; width:200px; padding:10px 13px; font-size:1.3em;">
+Acesse o aplicativo dos Correios e leia o código 2D ao lado. Você não precisará digitar o código do objeto e poderá salvar na sua lista de favoritos.
+</div>
+<div style="float:left; width:100px; margin:3px;">
+<a href="https://itunes.apple.com/us/app/sro-mobile/id998782060?l=pt&amp;ls=1&amp;mt=8" target="_blank">
+<img src="home2014/img/sro/Apple-store.png" width="138" height="43" style="border:2px solid #eee">
+</a>
+<a href="https://play.google.com/store/apps/details?id=br.com.correios.srocorreios" target="_blank">
+<img src="home2014/img/sro/Google-store.png" width="138" height="43" style="border:2px solid #eee">
+</a>
+</div>
+</div>
+<table class="listEvent sro">
+
+<tbody><tr>
+<td class="sroDtEvent" valign="top">
+01/02/2016 <br> 
+18:37 <br>
+
+<label style="text-transform:capitalize;">Sao Paulo&nbsp;/&nbsp;SP</label>
+
+</td>
+<td class="sroLbEvent">						
+
+<strong>Objeto entregue ao destinatário</strong> 							
+ <br> 
+</td>
+</tr>
 
 <tr>
-<td><font FACE=Tahoma color='#CC0000' size=2><b>Data</b></font></td>
-<td><font FACE=Tahoma color='#CC0000' size=2><b>Local</b></font></td>
-<td><font FACE=Tahoma color='#CC0000' size=2><b>Situação</b></font></td>
-</tr>
-<tr><td rowspan=1>01/02/2016 18:37</td><td>CEE MOEMA - Sao Paulo/SP</td><td><FONT COLOR="5F9F9F">Entrega Efetuada</font></td></tr>
-<tr><td rowspan=1>01/02/2016 16:07</td><td>Sao Paulo/SP</td><td><FONT COLOR="007FFF">Saiu para entrega ao destinatário</font></td></tr>
-<tr><td rowspan=2>30/01/2016 06:56</td><td>CTE JAGUARE - Sao Paulo/SP</td><td><FONT COLOR="000000">Encaminhado</font></td></tr>
-<tr><td colspan=2>Encaminhado para CTE SAUDE - Sao Paulo/SP</td></tr>
-<tr><td rowspan=2>30/01/2016 06:56</td><td>CTE SAUDE - Sao Paulo/SP</td><td><FONT COLOR="000000">Encaminhado</font></td></tr>
-<tr><td colspan=2>Encaminhado para CEE MOEMA - Sao Paulo/SP</td></tr>
-<tr><td rowspan=2>29/01/2016 17:49</td><td>AGF SENADOR VERGUEIRO - Sao Bernardo Do Campo/SP</td><td><FONT COLOR="000000">Encaminhado</font></td></tr>
-<tr><td colspan=2>Em trânsito para CTE JAGUARE - Sao Paulo/SP</td></tr>
-<tr><td rowspan=1>29/01/2016 16:48</td><td>AGF SENADOR VERGUEIRO - Sao Bernardo Do Campo/SP</td><td><FONT COLOR="000000">Postado</font></td></tr>
-</TABLE>
-<hr width=500 color='#FFCC33' size=1 align=left><FONT face=Tahoma size=2 color=black><center><br><p><p>SRO Mobile - Conheça nosso aplicativo oficial de Rastreamento.<p><a href="https://play.google.com/store/apps/details?id=br.com.correios.srocorreios"><img src="http://static.mlstatic.com/org-img/emails/googlePlay-2x_pt_c.png" border="0" height="43" width="138"></a><p><a href="https://itunes.apple.com/br/app/sro-mobile/id998782060?l=en&mt=8"><img src="http://static.mlstatic.com/org-img/emails/appStore-2x_pt_c.png" border="0" height="43" width="138"></a><p>
-<img src="http://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=DU156647456BR" border="0">
-<input type=hidden name="Z_ACTION">
-<input type=button name="done" value="Nova Consulta" onClick="BT_NEWP_OnClick(this)">
-<input type=button name="Print" value="Print" onClick="IMPRIMIR(this)">
-</BODY>
-</HTML>
+<td class="sroDtEvent" valign="top">
+01/02/2016 <br> 
+16:07 <br>
 
+<label style="text-transform:capitalize;">Sao Paulo&nbsp;/&nbsp;SP</label>
+
+</td>
+<td class="sroLbEvent">						
+
+<strong>Objeto saiu para entrega ao destinatário</strong> 							
+ <br> 
+</td>
+</tr>
+
+<tr>
+<td class="sroDtEvent" valign="top">
+30/01/2016 <br> 
+06:56 <br>
+Sao Paulo / SP<br>
+
+</td>
+<td class="sroLbEvent">						
+
+<strong>Objeto encaminhado</strong> 							
+ <br> 
+de Unidade Operacional em Sao Paulo / SP para Unidade Operacional em Sao Paulo / SP 
+</td>
+</tr>
+
+<tr>
+<td class="sroDtEvent" valign="top">
+30/01/2016 <br> 
+06:56 <br>
+Sao Paulo / SP<br>
+
+</td>
+<td class="sroLbEvent">						
+
+<strong>Objeto encaminhado</strong> 							
+ <br> 
+de Unidade Operacional em Sao Paulo / SP para Unidade de Distribuição em Sao Paulo / SP 
+</td>
+</tr>
+
+<tr>
+<td class="sroDtEvent" valign="top">
+29/01/2016 <br> 
+17:49 <br>
+Sao Bernardo Do Campo / SP<br>
+
+</td>
+<td class="sroLbEvent">						
+
+<strong>Objeto encaminhado</strong> 							
+ <br> 
+de Agência dos Correios em Sao Bernardo Do Campo / SP para Unidade Operacional em Sao Paulo / SP 
+</td>
+</tr>
+
+<tr>
+<td class="sroDtEvent" valign="top">
+29/01/2016 <br> 
+16:48 <br>
+
+<label style="text-transform:capitalize;">Sao Bernardo Do Campo&nbsp;/&nbsp;SP</label>
+
+</td>
+<td class="sroLbEvent">						
+
+<strong>Objeto postado</strong> 							
+ <br> 
+</td>
+</tr>
+
+</tbody></table>			
+<div id="imagem" style="display:none">
+<div class="status">
+
+<img src="home2014/img/SRO/entrega.gif" alt="Objeto entregue ao destinatário">
+
+</div>
+</div>	
+
+<script>
+document.getElementById('imagemhidden').innerHTML = document.getElementById('imagem').innerHTML;
+</script>
+<div class="btnform">
+
+<button class="btn2 float-left" onclick="location.href='http://www2.correios.com.br/sistemas/rastreamento/'">Nova Consulta</button>
+</div>
+</div>
+
+<div class="modal">
+<div id="inline_content2" class="inline_content">
+  
+  
+    <h3><br>
+      <br>
+      O status do objeto pesquisado está finalizado.<br>
+      Não é possível solicitar notificação por SMS.</h3>
+    
+</div>
+
+<script src="sistemas/rastreamento/js/jquery.validationEngine.js" type="text/javascript"></script>
+<script src="sistemas/rastreamento/js/jquery.validationEngine-pt.js" type="text/javascript"></script>
+<script>
+	//$(document).ready(function(){$("#formSms").validationEngine();});
+</script>
+</div>
+
+<script type="text/javascript" src="sistemas/rastreamento/js/sro.js"></script>
+<script type="text/javascript" src="sistemas/rastreamento/js/jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="sistemas/rastreamento/js/MascaraValidacao.js"></script>
+		
+</div>
+</div>
+<br class="clr">
+</div>
+</div>
+</div>
+</div><!-- class="wrap" -->
+<!-- laminas -->
+<div class="footer">
+	<div class="wrap">
+		<div class="column-footer">
+			<h3><a href="sistemas/falecomoscorreios">Fale com os Correios</a></h3>
+			<ul>
+				<li class="node"><a href="sistemas/falecomoscorreios">Manifestação via Internet</a>
+					<ul>
+						<li><a href="sistemas/falecomoscorreios">Fale Conosco pelo site</a></li>
+
+					</ul>
+				</li>
+				
+				<li class="node">
+					<a href="sistemas/falecomoscorreios">Atendimento telefônico</a>
+					<ul>
+						<li>3003 0100 (Capitais e Região Metropolitanas)</li>
+						<li>0800 725 7282 (Demais localidades)</li>
+						<li>0800 725 0100 (Sugestões ou reclamações)</li>
+					</ul>
+				</li>
+
+				<li class="node">
+					<a href="sistemas/agencias/">Rede de atendimento</a>
+					<ul>
+						<li><a href="sistemas/agencias">Consulte endereços e horários de atendimentos <br>das agências dos Correios</a></li>
+
+					</ul>
+				</li>
+				<li class="node">
+					<a href="http://www.correios.com.br/sobre-correios/fale-com-os-correios/ouvidoria">Ouvidoria</a>
+
+				</li>
+			</ul>
+		</div>
+		<div class="column-footer">
+			<h3><a href="">Portal Correios</a></h3>
+			<ul>
+				<li><a href="http://www.correios.com.br/sitemap">Mapa do site</a></li>
+				<li><a href="sistemas/rastreamento/default.cfm">Rastreamento de objetos</a></li>
+				<li><a href="http://www.correios.com.br/correios/sobre-correios/sala-de-imprensa/fale-com-a-assessoria-de-comunicacao">Sala de Imprensa</a></li>
+				<li><a href="institucional/concursos/correios/default.cfm">Concursos</a></li>
+				<li><a href="http://www.correios.com.br/correios/sobre-correios/patrocinio/patrocinio">Patrocínios</a></li>
+				<li><a href="http://www.correios.com.br/correios/sobre-correios/fale-com-os-correios/contatos-comerciais">Contatos comerciais</a></li>
+				<li><a href="http://www.correios.com.br/correios/sobre-correios/a-empresa/carta-de-servicos-ao-cidadao">Carta de serviços ao cidadão</a></li>
+				<li><a href="http://www.correios.com.br/sobre-correios/fale-com-os-correios/denuncias/denuncias/">Denúncia</a></li>
+				<li><a href="http://www.mc.gov.br/">Ministério das Comunicações</a></li>
+			</ul>
+		</div>
+		<div class="column-footer">
+			<h3><a href="">Outros sites dos Correios</a></h3>
+			<ul>
+				<li><a href="http://www.correios.com.br/para-voce">Correios para você</a></li>
+				<li><a href="http://www.correios.com.br/para-sua-empresa">Correios para sua empresa</a></li>
+				<li><a href="http://www.correios.com.br/sobre-correios">Sobre Correios</a></li>
+				<li><a href="http://shopping.correios.com.br/correiosonline">Loja virtual dos Correios</a></li>
+				<li><a href="http://blog.correios.com.br/correios">Blog dos Correios</a></li>
+				<li><a href="http://blog.correios.com.br/filatelia">Espaço da Filatelia</a></li>
+				<li><a href="http://m.correios.com.br/">Correios Mobile</a></li>
+				<li><a href="http://www2.correios.com.br/">Sistemas dos Correios</a></li>
+			</ul>
+		</div>
+		<div class="copy">
+			<a href="http://www.correios.com.br/sobre-correios/fale-com-os-correios/politica-de-privacidade-e-notas-legais/">Política de Privacidade e notas legais</a> -  © Copyright  2014 Correios - Todos os direitos reservados.
+		</div>
+	</div>
+</div>
+ 
+</div>
+<!-- class="back" -->
+
+<script type="text/javascript">
+
+ddaccordion.init({
+	headerclass: "expo", //Shared CSS class name of headers group
+	contentclass: "dados", //Shared CSS class name of contents group
+	revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+	mouseoverdelay: 100, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: false, //Collapse previous content (so only one open at any time)? true/false
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: false, //persist state of opened contents within browser session?
+	toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "normal", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+
+	}
+})
+
+ddaccordion.init({
+	headerclass: "abarotulo", //Shared CSS class name of headers group
+	contentclass: "submenu", //Shared CSS class name of contents group
+	revealtype: "mouseover", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+	mouseoverdelay: 100, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: true, //Collapse previous content (so only one open at any time)? true/false
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: false, //persist state of opened contents within browser session?
+	toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+			
+	}
+})
+
+
+/*Agencias*/
+ddaccordion.init({
+	headerclass: "expodados", //Shared CSS class name of headers group
+	contentclass: "contentexpodados", //Shared CSS class name of contents group
+	revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+	mouseoverdelay: 0, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: false, //Collapse previous content (so only one open at any time)? true/false
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: false, //persist state of opened contents within browser session?
+	toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+})
+
+function iconeAbaMouseOut(){
+	$('ul.iconeaba').mouseleave(function() {
+		ddaccordion.collapseall('abarotulo');
+	});	
+}
+function produtosAZMouseOut(){
+	$('div.produtosaz').mouseleave(function() {
+		ddaccordion.collapseall('expo');
+	});	
+}
+
+function produtosAZtrocaMostraTudo(){
+	$('#abreTudo').css('display','block');
+	$('#abreFecha a').click(function() {
+		$("#abreFecha a").toggle();
+	});	
+}
+
+function cbDivMouseOut(){
+	$('div.cbDiv').mouseleave(function() {
+		ddaccordion.collapseall('expo');
+	});	
+}
+
+$(document).ready(function(){
+	iconeAbaMouseOut();
+	produtosAZMouseOut();
+	produtosAZtrocaMostraTudo();
+	cbDivMouseOut();
+	
+});
+
+
+</script><style type="text/css">
+.dados{display: none}
+a.hiddenajaxlink{display: none}
+</style><style type="text/css">
+.submenu{display: none}
+a.hiddenajaxlink{display: none}
+</style><style type="text/css">
+.contentexpodados{display: none}
+a.hiddenajaxlink{display: none}
+</style> <script type="text/javascript">
+ 
+		$(document).ready(function(){
+ 
+		$.jtabber({
+			mainLinkTag: "#nav a", // much like a css selector, you must have a 'title' attribute that links to the div id name
+			activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+			hiddenContentClass: "hiddencontent", // the class of the content you are hiding until the tab is clicked
+			//showDefaultTab: null, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+			showErrors: false, // true/false - if you want errors to be alerted to you
+			effect: null, // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+			effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+		})
+ 
+		})
+ 
+ 
+		$(document).ready(function(){
+ 
+		$.jtabber({
+			mainLinkTag: "#seletorforms select option", // much like a css selector, you must have a 'title' attribute that links to the div id name
+			activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+			hiddenContentClass: "hiddencontent2", // the class of the content you are hiding until the tab is clicked
+			showDefaultTab: null, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+			showErrors: false, // true/false - if you want errors to be alerted to you
+			effect: 'slide', // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+			effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+		})
+ 
+		})
+ 
+		$(document).ready(function(){
+ 
+		$.jtabber({
+			mainLinkTag: "#seletorforms2 select option", // much like a css selector, you must have a 'title' attribute that links to the div id name
+			activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+			hiddenContentClass: "hiddencontent3", // the class of the content you are hiding until the tab is clicked
+			showDefaultTab: null, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+			showErrors: false, // true/false - if you want errors to be alerted to you
+			effect: 'slide', // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+			effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+		})
+ 
+		})
+		
+		$(document).ready(function(){
+ 
+		$.jtabber({
+			mainLinkTag: "#wizard a", // much like a css selector, you must have a 'title' attribute that links to the div id name
+			activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+			hiddenContentClass: "hiddencontent4", // the class of the content you are hiding until the tab is clicked
+			showDefaultTab: 1, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+			showErrors: false, // true/false - if you want errors to be alerted to you
+			effect: null, // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+			effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+		})
+ 
+		})
+		
+</script> 		<script>
+			$(document).ready(function(){
+				//Examples of how to assign the ColorBox event to elements
+				$(".group1").colorbox({rel:'group1'});
+				$(".group2").colorbox({rel:'group2', transition:"fade"});
+				$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
+				$(".group4").colorbox({rel:'group4', slideshow:true});
+				$(".ajax").colorbox();
+				$(".youtube").colorbox({iframe:true, innerWidth:425, innerHeight:344});
+				$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+				$(".inline").colorbox({inline:true, width:"50%"});
+				$(".inline2").colorbox({inline:true, width:"315px"});
+				$(".callbacks").colorbox({
+					onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+					onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+					onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+					onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+					onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+				});
+				
+				//Example of preserving a JavaScript event for inline calls.
+				$("#click").click(function(){ 
+					$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+					return false;
+				});
+			});
+		</script> 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-564464-9', 'auto');
+  ga('send', 'pageview');
+
+</script>
+ 
+
+<!-- contentobjects: page generated at 2016-03-28 05:06 PM - arguments.deleteparsedpages = 1. -->
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" style="display: none; padding-bottom: 20px; padding-right: 0px;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden; float: left;"></div><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><div id="cboxNext" style="float: left;"></div><div id="cboxPrevious" style="float: left;"></div><div id="cboxSlideshow" style="float: left;"></div><div id="cboxClose" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></body></html>

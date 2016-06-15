@@ -29,7 +29,7 @@ public class SroScraper {
 
   /** The Constant BASE_URL. */
   private static final String BASE_URL =
-      "http://websro.correios.com.br/sro_bin/txect01$.QueryList";
+      "http://www2.correios.com.br/sistemas/rastreamento/resultado.cfm";
 
   /** The Constant SDF. */
   private static final SimpleDateFormat SDF = new SimpleDateFormat("dd/MM/yyyy hh:mm");
@@ -47,36 +47,41 @@ public class SroScraper {
       throws IllegalStateException, ParseException, MalformedURLException, IOException {
 
     Document doc = Jsoup.connect(BASE_URL)
-                        .data("P_LINGUA","001")
-                        .data("P_TIPO","001")
-                        .data("P_COD_UNI",trackingNumber)
-                        .get();
+                        .header("Referer", "http://www2.correios.com.br/sistemas/rastreamento/")
+                        .data("objetos",trackingNumber)
+                        .post();
     
     if (doc.getElementsMatchingText(NOT_FOUND).size() > 0) {
       throw new IllegalStateException();
     }
-    // Element table contains tracking information
-    Elements tables = doc.getElementsByTag("table");
-    Element table = tables.get(0);
+    // Element DIV contains tracking information
+    Element div = doc.getElementsByClass("ctrlcontent").get(0);
+    Elements table = div.getElementsByClass("sro");
 
     List<TrackingEntry> list = new ArrayList<TrackingEntry>();
 
-    Elements trs = table.getElementsByTag("tr");
-    Elements tds = null;
+    Elements trs = table.get(0).getElementsByTag("tr");
+    Element tdEvent = null;
+    Element tdLabel = null;
 
     /*
      * first TR is heading, so we skip it TRs can hold a event entry or a more detailed event description
      */
-    for (int i = 1; i < trs.size(); i++)
-
-    {
-      tds = trs.get(i).getElementsByTag("td");
-      if (tds.size() == 1) { // a TR with a single TD holds the detailed event description
-        list.get(list.size() - 1).setDetail(tds.get(0).text());
-      } else { // a TR with three TDs is a event entry it self
-               // td 1 = date | td 2 - location | td 3 - action
-        list.add(new TrackingEntry(SDF.parse(tds.get(0).text()), tds.get(1).text(), tds.get(2).text()));
+    for (int i = 1; i < trs.size(); i++) {
+      tdEvent = trs.get(i).getElementsByClass("sroDtEvent").get(0);
+      tdLabel= trs.get(i).getElementsByClass("sroLbEvent").get(0);
+      String location = null;
+      String date = null;
+      if(!tdEvent.getElementsByTag("label").isEmpty()) {
+        location = tdEvent.getElementsByTag("label").get(0).text();
+        tdEvent.getElementsByTag("label").empty();
+        date = tdEvent.text();
+      } else {
+        String[] splits = tdEvent.html().split("<br>");
+        location = splits[2];
+        date = splits[0] + splits[1];
       }
+      list.add(new TrackingEntry(SDF.parse(date), location, tdLabel.text()));
     }
 
     return new TrackingResult(trackingNumber, Lists.reverse(list));

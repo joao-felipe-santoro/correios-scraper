@@ -42,7 +42,7 @@ public class SroScrapersTest {
     JsoupTestHelper.prepareMock(SroScraper.class, "sro_ok.html");
 
     TrackingResult result = SroScraper.getTrackingResult("AA123456789AA");
-    assertEquals(6, result.getTracking().size());
+    assertEquals(5, result.getTracking().size());
     assertEquals(result.getTrackingNumber(), "AA123456789AA");
 
   }

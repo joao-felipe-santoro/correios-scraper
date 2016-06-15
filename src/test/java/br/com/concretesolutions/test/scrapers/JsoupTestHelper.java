@@ -44,10 +44,10 @@ public class JsoupTestHelper {
       PowerMockito.when(connection.post()).thenReturn(document);
     } else if (klass == SroScraper.class) {
       PowerMockito.when(connection.data(Mockito.anyString(), Mockito.anyString()))
-          .thenReturn(connection)
-          .thenReturn(connection)
           .thenReturn(connection);
-      PowerMockito.when(connection.get()).thenReturn(document);
+      PowerMockito.when(connection.header(Mockito.anyString(), Mockito.anyString()))
+          .thenReturn(connection);
+      PowerMockito.when(connection.post()).thenReturn(document);
     }
   }
 }

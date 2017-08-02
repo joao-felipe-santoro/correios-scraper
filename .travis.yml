@@ -1,7 +1,6 @@
-sudo: required
 language: java
 jdk:
-- oraclejdk8
+  - oraclejdk8
 before_script:
   - chmod +x gradlew
 script:

@@ -56,7 +56,7 @@ public class SroScraper {
     }
     // Element DIV contains tracking information
     Element div = doc.getElementsByClass("ctrlcontent").get(0);
-    Elements table = div.getElementsByClass("sro");
+    Elements table = div.getElementsByClass("listEvent");
 
     List<TrackingEntry> list = new ArrayList<TrackingEntry>();
 

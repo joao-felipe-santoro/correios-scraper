@@ -16,7 +16,7 @@ repositories {
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
-apply plugin: 'spring-boot'
+apply plugin: 'org.springframework.boot'
 apply plugin: 'jacoco'
 
 sourceCompatibility = 1.8

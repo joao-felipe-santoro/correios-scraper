@@ -22,48 +22,40 @@ Scraper to retrieve Brazilian Postal Service object tracking and Postal Code inf
     }
 ```
 
-# GET /sro?trackingNumber=DU156647456BR
+# GET /sro?trackingNumber=SW864122406BR
 
 + Response 200 (application/json;charset=UTF-8)
 
     + Body
 ```javascript
-    {  
-        "tracking":[  
-            {  
-              "date":1454093280000,
-              "location":"AGF SENADOR VERGUEIRO - Sao Bernardo Do Campo/SP",
-              "action":"Postado"
-            },
-            {  
-              "date":1454096940000,
-              "location":"AGF SENADOR VERGUEIRO - Sao Bernardo Do Campo/SP",
-              "action":"Encaminhado",
-              "detail":"Em trânsito para CTE JAGUARE - Sao Paulo/SP"
-            },
-            {  
-              "date":1454144160000,
-              "location":"CTE SAUDE - Sao Paulo/SP",
-              "action":"Encaminhado",
-              "detail":"Encaminhado para CEE MOEMA - Sao Paulo/SP"
-            },
-            {  
-              "date":1454144160000,
-              "location":"CTE JAGUARE - Sao Paulo/SP",
-              "action":"Encaminhado",
-              "detail":"Encaminhado para CTE SAUDE - Sao Paulo/SP"
-            },
-            {  
-              "date":1454350020000,
-              "location":"Sao Paulo/SP",
-              "action":"Saiu para entrega ao destinatário"
-            },
-            {  
-              "date":1454359020000,
-              "location":"CEE MOEMA - Sao Paulo/SP",
-              "action":"Entrega Efetuada"
-            }
-        ],
-    "trackingNumber":"DU156647456BR"
+    {
+      "tracking": [
+        {
+          "date": "2017-06-16 17:25",
+          "location": "SAO PAULO / SP",
+          "action": "Objeto postado"
+        },
+        {
+          "date": "2017-06-16 17:49",
+          "location": " SAO PAULO / SP",
+          "action": "Objeto encaminhado de Agência dos Correios em SAO PAULO / SP para Unidade Operacional em SAO PAULO / SP"
+        },
+        {
+          "date": "2017-06-17 06:35",
+          "location": " SAO PAULO / SP",
+          "action": "Objeto encaminhado de Unidade Operacional em SAO PAULO / SP para Unidade Operacional em SAO PAULO / SP"
+        },
+        {
+          "date": "2017-06-17 06:56",
+          "location": " SAO PAULO / SP",
+          "action": "Objeto encaminhado de Unidade Operacional em SAO PAULO / SP para Unidade de Distribuição em SAO PAULO / SP"
+        },
+        {
+          "date": "2017-06-19 13:10",
+          "location": "SAO PAULO / SP",
+          "action": "Objeto saiu para entrega ao destinatário"
+        }
+      ],
+      "trackingNumber": "SW864122406BR"
     }
 ```

@@ -16,7 +16,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import br.com.concretesolutions.api.cep.PostalcodeController;
 import br.com.concretesolutions.api.models.CepResult;
-import br.com.concretesolutions.config.ApplicationConfig;
 import br.com.concretesolutions.scrapers.CepScraper;
 
 import org.junit.Before;
@@ -27,8 +26,7 @@ import org.mockito.Mockito;
 import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.test.context.web.WebAppConfiguration;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
@@ -40,8 +38,7 @@ import java.io.IOException;
  */
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({CepScraper.class})
-@SpringApplicationConfiguration(classes = ApplicationConfig.class)
-@WebAppConfiguration
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class PostalcocdeControllerTest {
 
   @InjectMocks  

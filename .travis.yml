@@ -1,26 +1,22 @@
 language: java
 jdk:
-  - oraclejdk8
+- oraclejdk8
 before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
 script:
-  - gradle check
-  - gradle codeCoverageReport
+- gradle check
+- gradle codeCoverageReport
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+- bash <(curl -s https://codecov.io/bash) -t
 deploy:
   provider: heroku
   api_key:
-    secure: DOeDcxJ0Nx5aP1qfwGWONVfU7gYj0KlUxBRipVAIFLKt2qnOqwn75UBHK35MmNoI3e7NxPkiMYwn/+29pKTfUv9J3PuuQRaAlGQHNgawz7sdWVr9550cbyuy+dI4XnnCMGF0njgq4EZUBfZKTjpTTyWuBUV10rRLPUI1yG3QXm8QKxFQyWXTZqRgKO4vNoCmljAY0uIse0TzRnTDaIwc59OlhbnHBKaul/1YVC9p3NbudFU4NVkPt9o8S5ppxpL3AH4MIEDeEdSWCnWMg9XD3l6z/HCdlORneavr49OYSTod3N6IayAhGPsmbgtq4MLGuqG/WyWOjjHs9rIM73Y6aLVaJMQaHaSCVLYxp5llQ+B8RwO+uDgCv73VwzX04Pwa+tDxVmLBaNq2bLkbgp/rT55ygeqDeHrOqZG+XZgX0g9Ao1vb7WvM0ff36ffacXplKbFjdtEiPrSrHPk4UPkThwlu6p6eF1/4RgetFUclf7PpA5DrGL1JhMj1yenn1IiMDi3v2s4pzP8zB/YLdr54/6XIdHe+XH/rvsDMYoowkk64IBgtRsPEnCvgLk9mJvwui2gPJcwvHtZN3kF+FZxRxmKRy8T1J96vDuoOuk7ppGAxytobXq/t+7viAr1R1dZMtDonfXddNjFjvucFtx6HQRBQ8pCprNGu5D/Csks43rI=
+    secure: m2jj3A5h/C0jUWcZNL0kGlGCWZUWocr9HVl0TrvzEcQQpUqeldDJ3WhItYuNCulOkBbuIhJgsWyJqj1s9mVpy6B9nyU2xifMjGphUUgrHfB6o0PakU6wSi09MPyMgYkBjW2xD5R6k4Xj1zI4Bkip3ZS85BWNJOaAjKrma3hHBpDX7RFGQOugKR1XVNjE1FpIBuGzpb7YoAAuJPlALwUy3VTMx9ZXP0ts9Nu7jcpb0WMx2JfkiV57UC95ISTfxYIvlgvucTXIqvcSet8tlRfDsVdTPhio0h7pqQ85fgLhhCkcDt7/lLFA8jYkDqbhMCeLZK2Tb47pHyNjH9ErwipjnpvJD5jhnn5ACj1AToQPJaOQIvUElH1yn+OXU7oulgCSxDTr1NwO+AQdetNS0TBFpQPgg4amKALi7sFZZmNIkMWDh3hKeXREPOrd3MXxmQFgL0h7KfcOrTxwmcXzgHD7DuSWuccmCDaAp+jJEFdDxS9Iv/0kYqSPM6J0E/N1EFta1QQODJfJyPv8Y+LfltMRFrmLed++USvipYPOM8Za9uKYRs1zu0H40/40hAsOei2nx5uDckCHseBcwXYTzaHHTaocMwyDKmyUxuxh/3HXqA1wy3vUJNV38dtaIyF8HZjghInvLFrgYsMIYdNTRpPDYmSxl6Eb6VmUQyPvJZb37Z8=
   app: correios-scraper
   on:
     repo: cs-joao-felipe/correios-scraper
-
-
-
-
